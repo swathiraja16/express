@@ -14,11 +14,8 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use('/dishes', dishRouter);
-app.use('/dishes/:dishId', dishRouter);
 app.use('/promotions', promoRouter);
-app.use('/promotions/:promoId', promoRouter);
 app.use('/leaders', leaderRouter);
-app.use('/leaders/:leaderId', leaderRouter);
 
 app.use(express.static(__dirname + '/public'));
 
